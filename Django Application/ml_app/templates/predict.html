@@ -1,9 +1,10 @@
+
 {% extends 'base.html' %}
 {% load static %}
 {%block content%}
 {%if no_faces%}
 <div class="container">
-  <div class="logo text-center mb-3"><img src="{% static 'D:\api\Deepfake_detection_using_deep_learning\Django Application\static\images\home2.png'%}" alt="Logo" ></div>
+  <div class="logo text-center mb-3"><img src="{% static 'images/logo1.png'%}" alt="Logo" ></div>
   <hr />
   <div class="alert alert-danger">
     No faces detected. Cannot process the video.
@@ -11,7 +12,7 @@
 </div>
 {%else%}
 <div class="container">
-  <div class="logo text-center mb-3"><img src="{% static 'D:\api\Deepfake_detection_using_deep_learning\Django Application\static\images\home2.png'%}" alt="Logo" ></div>
+  <div class="logo text-center mb-3"><img src="{% static 'images/logo1.png'%}" alt="Logo" ></div>
   <hr />
 
   <h3>Frames Split</h3>

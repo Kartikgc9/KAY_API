@@ -1,105 +1,136 @@
+:root {
+    --primary-color: #2d3436;
+    --secondary-color: #0984e3;
+    --accent-color: #00cec9;
+    --background-color: #f5f6fa;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 body {
     height: 100%;
-}
-.bg {
-    /* The image used */
-    background-image: url("D:\api\Deepfake_detection_using_deep_learning\Django Application\static\images\background1.png");
-  
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-  
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-
+    background-color: var(--background-color);
+    font-family: 'Inter', sans-serif;
 }
 
-section{
-    padding-top: 60px;
+/* Modern Navbar Styles */
+.custom-navbar {
+    background-color: var(--primary-color);
+    padding: 1rem 2rem;
+    box-shadow: var(--box-shadow);
 }
 
-.width-300{
-    width: 300px;
-    margin: auto;
-    padding: 20px;
-    box-shadow: 0 0px 9px 2px #ccc;
+.navbar-brand .brand-text {
+    color: var(--accent-color);
+    font-weight: 700;
+    font-size: 1.5rem;
 }
 
-.width-400{
-    width: 400px;
-    margin: auto;
-    padding: 20px;
-    margin-top: 80px;
-    margin-bottom: 150px;
-    box-shadow: 0 0px 9px 2px #ccc;
+.custom-navbar .nav-link {
+    color: white !important;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
 }
 
-.width-500{
-    width: 500px;
-    margin: auto;
-    padding: 20px;
-    box-shadow: 0 0px 9px 2px #ccc;
+.custom-navbar .nav-link:hover {
+    color: var(--accent-color) !important;
 }
 
-#videos{
-    display: none;
+/* Container Styles */
+.width-300, .width-400, .width-500 {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem auto;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease;
 }
 
+.width-300:hover, .width-400:hover, .width-500:hover {
+    transform: translateY(-5px);
+}
+
+.width-300 { max-width: 300px; }
+.width-400 { max-width: 400px; }
+.width-500 { max-width: 500px; }
+
+/* Image Containers */
+#preprocessed_images, #faces_images, #heatmap_images {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    box-shadow: var(--box-shadow);
+    transition: all 0.3s ease;
+}
+
+#preprocessed_images {
+    height: 280px;
+}
+
+#faces_images {
+    height: 180px;
+}
+
+#heatmap_images {
+    height: 230px;
+}
+
+/* Image Items */
+.preprocess, .faces, .heat-map {
+    padding: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.preprocess:hover, .faces:hover, .heat-map:hover {
+    transform: scale(1.05);
+}
+
+/* Canvas Overlay */
 canvas {
     position: absolute;
     top: 0;
     left: 0;
+    border-radius: 8px;
 }
 
-.preprocess {
-    padding-right: 20px;
-    padding-bottom: 50px;
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
 }
 
-#preprocessed_images {
-  white-space: nowrap;
-  width: auto;
-  height: 250px;
-  padding: 20px;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  box-shadow: 0 0px 9px 2px #ccc;
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
 }
 
-#faces_images {
-    white-space: nowrap;
-    width: auto;
-    height: 150px;
-    padding: 20px;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    box-shadow: 0 0px 9px 2px #ccc;
+::-webkit-scrollbar-thumb {
+    background: var(--secondary-color);
+    border-radius: 4px;
 }
 
-.faces {
-    padding-right: 20px;
-    padding-bottom: 50px;
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-color);
 }
 
-#heatmap_images{
-    white-space: nowrap;
-    width: auto;
-    height: 200px;
-    padding: 20px;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    box-shadow: 0 0px 9px 2px #ccc;
-    margin-bottom: 20px;
+/* Background Image */
+.bg {
+    background-image: url("D:/KAY_API/Django Application/static/images/kay.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
 }
 
-.heat-map {
-    padding-right: 20px;
-    padding-bottom: 50px;
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .width-300, .width-400, .width-500 {
+        width: 90%;
+        margin: 1rem auto;
+    }
+    
+    .custom-navbar {
+        padding: 0.5rem 1rem;
+    }
 }
-
-/* span.spinner-border {
-    display: none;
-} */

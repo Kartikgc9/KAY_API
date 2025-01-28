@@ -71,8 +71,8 @@ Pygments==2.18.0
 pyparsing==3.1.2
 pyrsistent==0.20.0
 python-dateutil==2.9.0
-# pytz==2019.3 Commenting for production deployment
-# pywin32==227
+pytz==2019.3 #Commenting for production deployment
+pywin32==227
 pywinpty>=1.1.0
 PyYAML==6.0.1
 pyzmq==26.0.3

@@ -1,3 +1,4 @@
+
 """project_settings URL Configuration
 """
 from django.contrib import admin
